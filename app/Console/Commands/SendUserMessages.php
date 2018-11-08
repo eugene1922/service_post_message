@@ -82,7 +82,7 @@ class SendUserMessages extends Command
     {
     	echo $msg->body . PHP_EOL;
 
-        $userMessages = DB::select("SELECT `user_id`, `message` FROM `user_messages` LIMIT 1");
+        $userMessages = DB::select("SELECT `user_id`, `message` FROM `user_messages`");
 
         foreach ($userMessages as $userMessage) {
         	$this->handleSendMessage($userMessage->user_id, $userMessage->message);
