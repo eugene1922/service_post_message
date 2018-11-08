@@ -25,8 +25,6 @@ class MessageController extends Controller
     	} catch (Illuminate\Database\QueryException $e) {
     		Log::error('MessageController::send error.', ['error' => $e->getMessage()]);
 
-    		//report()
-
     		$result = ['error' => 'Something went wrong'];
     	}
 

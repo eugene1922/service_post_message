@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-	dd(App\Models\UserMessage::all());
+	return view('home');
 });
 
 Route::post('/message/send', 'MessageController@send');
